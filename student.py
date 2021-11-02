@@ -59,8 +59,9 @@ class Piggy(PiggyParent):
     def Vince(self):
       
       self.deg_fwd(360)
+      time.sleep(3)
         #self.turn_by_deg(90)
-      self.right(primary = 40, counter = -40)
+      self.right(primary = 50, counter = -40)
       time.sleep(1)
       self.stop()
 
