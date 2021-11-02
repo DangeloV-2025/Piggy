@@ -41,7 +41,7 @@ class Piggy(PiggyParent):
                 "f": ("Follow", self.follow),
                 "c": ("Calibrate", self.calibrate),
                 "q": ("Quit", self.quit),
-                "v": ("Vincent D. Test", self.vanek)
+                "v": ("Vincent D. Test", self.Vince)
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
@@ -58,7 +58,7 @@ class Piggy(PiggyParent):
     '''
     def Vince(self):
       pass
-      
+
     def dance(self):
         """A higher-ordered algorithm to make your robot dance"""
         # TODO: check to see if it's safe before dancing
