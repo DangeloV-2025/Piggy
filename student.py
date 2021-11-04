@@ -66,8 +66,16 @@ class Piggy(PiggyParent):
       self.stop()
 
     def dance(self):
+      turn_by_deg(40)
+      servo(600)
+      self.fwd(360)
+      self.back(360)
+      turn_by_deg(-40)
+      self.fwd(360)
+      self.back(360)
+      self.stop
         """A higher-ordered algorithm to make your robot dance"""
-        # TODO: check to see if it's safe before dancing
+        
         
         # lower-ordered example...
         self.right(primary=50, counter=50)
