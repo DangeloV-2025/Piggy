@@ -74,13 +74,13 @@ class Piggy(PiggyParent):
       self.fwd(360)
       self.back(360)
       self.stop
-        """A higher-ordered algorithm to make your robot dance"""
+      """A higher-ordered algorithm to make your robot dance"""
         
         
         # lower-ordered example...
-        self.right(primary=50, counter=50)
-        time.sleep(2)
-        self.stop()
+      self.right(primary=50, counter=50)
+      time.sleep(2)
+      self.stop()
         
 
     def safe_to_dance(self):
