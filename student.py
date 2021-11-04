@@ -67,7 +67,9 @@ class Piggy(PiggyParent):
 
     def dance(self):
       self.turn_by_deg(40)
-      self.servo(1000)
+      self.servo(1000) # look right
+      time.sleep(.25) # give your head time to move
+      self.servo(2000) # look left
       self.fwd(360)
       self.back(360)
       self.turn_by_deg(-40)
