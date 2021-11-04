@@ -57,12 +57,12 @@ class Piggy(PiggyParent):
     ****************
     '''
     def Vince(self):
-      
-      self.deg_fwd(360)
-      time.sleep(3)
-        #self.turn_by_deg(90)
-      self.right(primary = 50, counter = -40)
-      time.sleep(1)
+      for i in range(1, 5):
+        self.deg_fwd(360)
+        time.sleep(3)
+          #self.turn_by_deg(90)
+        self.right(primary = 50, counter = -40)
+        time.sleep(1)
       self.stop()
 
     def dance(self):
