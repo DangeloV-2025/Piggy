@@ -59,10 +59,11 @@ class Piggy(PiggyParent):
     '''
     def Vince(self):
       mm = self.read_distance()
+      While mm > 20:
+        self.fwd
       if mm < 20:
         self.stop()
-      else:
-        print (self.read_distance())
+      
 
     
       
