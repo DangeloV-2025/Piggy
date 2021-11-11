@@ -42,6 +42,7 @@ class Piggy(PiggyParent):
                 "c": ("Calibrate", self.calibrate),
                 "q": ("Quit", self.quit),
                 "v": ("Vincent D. Test", self.Vince)
+                "b": ("Square test", self.square)
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
@@ -57,6 +58,11 @@ class Piggy(PiggyParent):
     ****************
     '''
     def Vince(self):
+      while True:
+        print self.read_distance
+      
+
+      def square(self):
       for i in range(1, 5):
         self.deg_fwd(540)
         time.sleep(3)
@@ -66,15 +72,11 @@ class Piggy(PiggyParent):
       self.stop()
 
     def dance(self):
-      self.turn_by_deg(40)
-      self.servo(1000) # look right
-      self.fwd(360)
-      self.back(360)
-      self.turn_by_deg(-40)
-      self.servo(2000) # look left
-      self.fwd(360)
-      self.back(360)
-      self.stop
+      if safe_to_dance(): 
+       
+       
+
+
       """A higher-ordered algorithm to make your robot dance"""
         
         
@@ -86,6 +88,7 @@ class Piggy(PiggyParent):
 
     def safe_to_dance(self):
         """ Does a 360 distance check and returns true if safe """
+        if safe_to_dance
         pass
 
     def shake(self):
