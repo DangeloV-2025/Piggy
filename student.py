@@ -62,7 +62,7 @@ class Piggy(PiggyParent):
         print self.read_distance
       
 
-      def square(self):
+    def square(self):
       for i in range(1, 5):
         self.deg_fwd(540)
         time.sleep(3)
