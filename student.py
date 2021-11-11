@@ -59,7 +59,7 @@ class Piggy(PiggyParent):
     '''
     def Vince(self):
       while True:
-        print self.read_distance
+        print self.read_distance()
       
 
     def square(self):
