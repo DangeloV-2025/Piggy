@@ -62,12 +62,13 @@ class Piggy(PiggyParent):
       while (self.read_distance() > 100):
         self.fwd()
       while (self.read_distance() < 99): 
-        self.right()
+        self.stop()
+
       
     def turner(self):
       while (self.read_distance() > 100):
         self.fwd()
-      self.back()
+      self.right()
 
     
       
