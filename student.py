@@ -71,7 +71,7 @@ class Piggy(PiggyParent):
           self.fwd()
           self.sleep(.25)
           self.stop()
-        else (self.read_distance() < 199):
+        elif (self.read_distance() < 199):
           self.right()
 
 
