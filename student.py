@@ -42,6 +42,7 @@ class Piggy(PiggyParent):
                 "c": ("Calibrate", self.calibrate),
                 "q": ("Quit", self.quit),
                 "v": ("Vincent D. Test", self.Vince),
+                "t": ("Turner Test", self.Turner),
                 "b": ("Square test", self.square)
                 }
         # loop and print the menu...
@@ -60,8 +61,12 @@ class Piggy(PiggyParent):
     def Vince(self):
       while (self.read_distance() > 100):
         self.fwd()
-      self.back()
+      self.right()
       
+    def Turner(self):
+      while (self.read_distance() > 100):
+        self.fwd()
+      self.back()
 
     
       
