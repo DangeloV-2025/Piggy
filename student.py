@@ -64,13 +64,23 @@ class Piggy(PiggyParent):
       while (self.read_distance() < 99): 
         self.stop()
 
-      
+   #edward helped me with this the commented text was what I tried. why did it not work?   
     def turner(self):
+      while True:
+        if (self.read_distance() > 200):
+          self.fwd()
+          self.sleep(.25)
+          self.stop
+        else (self.read_distance() < 199):
+          self.right()
+
+
+      '''
       while (self.read_distance() > 100):
         self.fwd()
         if (self.read_distance() <= 100):
           self.right()
-      
+      '''
 
 
     
