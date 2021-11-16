@@ -79,15 +79,17 @@ class Piggy(PiggyParent):
           time.sleep(1)
           self.fwd()
       
+        
       def Choice(self):
         while True:
           if(self.read_distance() > 200):
             self.fwd()
           elif(self.read_distance() < 199):
             self.stop()
-            1st = self.servo(1000)
-            self.read_distance()
-            2nd = self.servo(2000)
+            self.servo(1000)
+            1st = self.read_distance()
+            self.servo(2000)
+            2nd = self.read_distance()
             if (1st > 2nd):
               self.right()
             elif (2nd > 1st): 
