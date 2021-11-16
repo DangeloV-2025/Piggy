@@ -43,6 +43,7 @@ class Piggy(PiggyParent):
                 "q": ("Quit", self.quit),
                 "v": ("Vincent D. Test", self.vince),
                 "t": ("Turner Test", self.turner),
+                "p": ("Choice Test", self.Choice),
                 "b": ("Square test", self.square)
                 }
         # loop and print the menu...
@@ -77,8 +78,20 @@ class Piggy(PiggyParent):
           self.left()
           time.sleep(1)
           self.fwd()
-          
-
+      
+      def Choice(self):
+        while True:
+          if(self.read_distance() > 200):
+            self.fwd()
+          elif(self.read_distance() < 199):
+            self.stop()
+            1st = self.servo(1000)
+            self.read_distance()
+            2nd = self.servo(2000)
+            if (1st > 2nd):
+              self.right()
+            elif (2nd > 1st): 
+              self.left
 
       '''
       while (self.read_distance() > 100):
