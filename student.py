@@ -67,16 +67,17 @@ class Piggy(PiggyParent):
    #edward helped me with this the commented text was what I tried. why did it not work?   
     def turner(self):
       while True:
-        if (self.read_distance() > 200):
+        if(self.read_distance() > 200):
+          self.fwd()  
+        elif(self.read_distance() < 199):
+          self.right()
+          time.sleep(1)
+          self.fwd()
+          time.sleep(1)
+          self.left()
+          time.sleep(1)
           self.fwd()
           
-        elif (self.read_distance() < 199):
-          self.right()
-          self.fwd()
-          time.sleep(.5)
-          self.left()
-          self.fwd()
-          time.sleep(.5)
 
 
       '''
