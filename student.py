@@ -68,7 +68,8 @@ class Piggy(PiggyParent):
     def turner(self):
       while True:
         if (self.read_distance() > 200):
-          self.fwd(180)
+          self.fwd()
+          self.sleep(1)
           self.stop()
         elif (self.read_distance() < 199):
           self.right()
