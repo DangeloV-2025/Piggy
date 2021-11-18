@@ -86,17 +86,29 @@ class Piggy(PiggyParent):
         if(self.read_distance() > 200):
           self.fwd()
         elif(self.read_distance() < 199):
-          self.stop()
           self.servo(1000)
-          global first
+          time.sleep(1)
+          self.stop()
+          #global first
           first = self.read_distance()
           self.servo(2000)
-          global second
+          time.sleep(1)
+          self.stop()
+          #global second
           second = self.read_distance()
+          self.servo(1300)
+          time.sleep(1)
+          self.stop()
           if (first > second):
             self.right()
+            time.sleep(1)
+            self.stop()
+            self.turner()
           elif (second > first): 
-            self.left
+            self.left()
+            time.sleep(1)
+            self.stop()
+            self.turner()
 
       '''
       while (self.read_distance() > 100):
