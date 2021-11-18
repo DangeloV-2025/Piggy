@@ -106,11 +106,17 @@ class Piggy(PiggyParent):
             time.sleep(1)
             self.stop()
             self.fwd()
+            time.sleep(1)
+            self.left()
+            self.fwd
           elif (second > far_dist): 
             self.left()
             time.sleep(1)
             self.stop()
             self.fwd()
+            time.sleep(1)
+            self.right()
+            self.fwd
           else:
             self.back()
             self.Choice()
