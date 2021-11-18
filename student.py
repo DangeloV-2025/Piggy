@@ -104,12 +104,12 @@ class Piggy(PiggyParent):
             self.right()
             time.sleep(1)
             self.stop()
-            self.turner()
+            self.fwd()
           elif (second > first): 
             self.left()
             time.sleep(1)
             self.stop()
-            self.turner()
+            self.fwd()
 
       '''
       while (self.read_distance() > 100):
