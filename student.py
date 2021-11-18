@@ -96,20 +96,24 @@ class Piggy(PiggyParent):
           time.sleep(1)
           self.stop()
           #global second
+          far_dist = 2000
           second = self.read_distance()
           self.servo(1300)
           time.sleep(1)
           self.stop()
-          if (first > second):
+          if (first > far_dist):
             self.right()
             time.sleep(1)
             self.stop()
             self.fwd()
-          elif (second > first): 
+          elif (second > far_dist): 
             self.left()
             time.sleep(1)
             self.stop()
             self.fwd()
+          else:
+            self.back()
+            self.Choice()
 
       '''
       while (self.read_distance() > 100):
