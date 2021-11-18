@@ -83,9 +83,10 @@ class Piggy(PiggyParent):
         
     def Choice(self):
       while True:
-        if(self.read_distance() > 200):
+        if(self.read_distance() > 300):
           self.fwd()
-        elif(self.read_distance() < 199):
+        elif(self.read_distance() < 299):
+          self.stop()
           self.servo(1000)
           time.sleep(1)
           self.stop()
