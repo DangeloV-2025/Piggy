@@ -88,8 +88,10 @@ class Piggy(PiggyParent):
         elif(self.read_distance() < 199):
           self.stop()
           self.servo(1000)
+          global first
           first = self.read_distance()
           self.servo(2000)
+          global second
           second = self.read_distance()
           if (first > second):
             self.right()
