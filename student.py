@@ -81,7 +81,7 @@ class Piggy(PiggyParent):
 
       
         
-      def Choice(self):
+    def Choice(self):
         while True:
           if(self.read_distance() > 200):
             self.fwd()
