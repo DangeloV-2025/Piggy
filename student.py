@@ -91,9 +91,9 @@ class Piggy(PiggyParent):
             first = self.read_distance()
             self.servo(2000)
             second = self.read_distance()
-            if (1st > 2nd):
+            if (first > second):
               self.right()
-            elif (2nd > 1st): 
+            elif (second > first): 
               self.left
 
       '''
