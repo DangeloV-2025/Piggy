@@ -82,19 +82,19 @@ class Piggy(PiggyParent):
       
         
     def Choice(self):
-        while True:
-          if(self.read_distance() > 200):
-            self.fwd()
-          elif(self.read_distance() < 199):
-            self.stop()
-            self.servo(1000)
-            first = self.read_distance()
-            self.servo(2000)
-            second = self.read_distance()
-            if (first > second):
-              self.right()
-            elif (second > first): 
-              self.left
+      while True:
+        if(self.read_distance() > 200):
+          self.fwd()
+        elif(self.read_distance() < 199):
+          self.stop()
+          self.servo(1000)
+          first = self.read_distance()
+          self.servo(2000)
+          second = self.read_distance()
+          if (first > second):
+            self.right()
+          elif (second > first): 
+            self.left
 
       '''
       while (self.read_distance() > 100):
