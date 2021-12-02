@@ -44,7 +44,7 @@ class Piggy(PiggyParent):
                 "v": ("Vincent D. Test", self.vince),
                 "t": ("Turner Test", self.turner),
                 "p": ("Choice Test", self.Choice),
-                "w": ("Swerve Test", self.Swr),
+                "w": ("Swerve Test", self.swr),
                 "h": ("check barriers test", self.Check),
                 "b": ("Square test", self.square)
                 }
@@ -83,7 +83,7 @@ class Piggy(PiggyParent):
           self.swr("right")
 
         
-    def Swr(self, dir):
+    def swr(self, dir):
 
 
       if dir == "left":
