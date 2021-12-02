@@ -133,7 +133,7 @@ class Piggy(PiggyParent):
           self.stop()
           #global first
           first = self.read_distance()
-           self.servo(2000)
+          self.servo(2000)
           time.sleep(1)
           self.stop()
           #global second
