@@ -84,6 +84,7 @@ class Piggy(PiggyParent):
 
         
      def Swr(self, dir):
+
       if dir == "left":
         self.stop()
         self.left(primary = 60, counter 30)
@@ -92,6 +93,7 @@ class Piggy(PiggyParent):
         self.left(primary = 30, counter=60) 
         self.fwd()
       if dir == "right":
+        
         self.stop()
         self.left(primary = 30, counter=60)
         self.fwd()
