@@ -74,13 +74,19 @@ class Piggy(PiggyParent):
         self.servo(self.MIDPOINT + 200)
         if self.read_distance() <= barr_dist:
           self.swr("left")
+        else:
+          pass()
         self.servo(self.MIDPOINT)
         if self.read_distance() <= barr_dist:
           self.Choice()
+        else:
+          pass()
         self.servo(self.MIDPOINT - 200)
         # set 300 to variable
         if self.read_distance()  <= barr_dist:
           self.swr("right")
+        else:
+          pass()
 
         
     def swr(self, dir):
