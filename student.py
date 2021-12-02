@@ -78,8 +78,9 @@ class Piggy(PiggyParent):
           pass
         self.servo(self.MIDPOINT)
         if self.read_distance() <= barr_dist:
-          self.Choice()
-        else:
+          self.stop()
+          #self.Choice()
+        else: 
           pass
         self.servo(self.MIDPOINT - 200)
         # set 300 to variable
