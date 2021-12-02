@@ -97,7 +97,7 @@ class Piggy(PiggyParent):
         self.stop()
         self.left(primary = 60, counter = 30)
         self.fwd()
-        self.sleep(.5)
+        time.sleep(.5)
         self.right(primary = 60, counter=30) 
         self.fwd()
       if "right" in dir:
