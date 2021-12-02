@@ -69,17 +69,17 @@ class Piggy(PiggyParent):
 
     def Check(self):
       self.fwd() 
-      
+      barr_dist = 300
       while True:
         self.servo(self.MIDPOINT + 200)
-        if self.read_distance() <= 300:
+        if self.read_distance() <= barr_dist:
           self.swr("left")
         self.servo(self.MIDPOINT)
-        if self.read_distance() <= 300:
+        if self.read_distance() <= barr_dist:
           self.Choice()
         self.servo(self.MIDPOINT - 200)
         # set 300 to variable
-        if self.read_distance()  <= 300:
+        if self.read_distance()  <= barr_dist:
           self.swr("right")
 
         
