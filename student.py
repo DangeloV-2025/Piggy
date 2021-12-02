@@ -44,6 +44,8 @@ class Piggy(PiggyParent):
                 "v": ("Vincent D. Test", self.vince),
                 "t": ("Turner Test", self.turner),
                 "p": ("Choice Test", self.Choice),
+                "w": ("Swerve Test", self.Swr),
+                "h": ("check barriers test", self.Check),
                 "b": ("Square test", self.square)
                 }
         # loop and print the menu...
@@ -64,6 +66,42 @@ class Piggy(PiggyParent):
         self.fwd()
       while (self.read_distance() < 99): 
         self.stop()
+
+    def Check(self):
+      self.fwd() 
+      
+      while True:
+        self.servo(self.MIDPOINT + 200)
+        if self.read_distance() <= 300:
+          self.swr("left")
+        self.servo(self.MIDPOINT)
+        if self.read_distance() <= 300:
+          self.Choice()
+        self.servo(self.MIDPOINT - 200)
+        # set 300 to variable
+        if self.read_distance()  <= 300:
+          self.swr("right")
+
+        
+     def Swr(self, dir):
+       if dir == "left":
+         self.stop()
+         self.left(primary = 60, counter 30)
+         self.fwd()
+         self.sleep(.5)
+         self.left(primary = 30, counter=60) 
+         self.fwd()
+       if dir == "right":
+         self.stop()
+         self.left(primary = 30, counter=60)
+         self.fwd()
+         self.sleep(.5)
+         self.left(primary = 60, counter 30)
+         self.fwd()
+
+
+
+
 
    #edward helped me with this the commented text was what I tried. why did it not work?   
     def turner(self):
@@ -92,7 +130,7 @@ class Piggy(PiggyParent):
           self.stop()
           #global first
           first = self.read_distance()
-          self.servo(2000)
+           self.servo(2000)
           time.sleep(1)
           self.stop()
           #global second
