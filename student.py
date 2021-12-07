@@ -180,11 +180,16 @@ class Piggy(PiggyParent):
             self.fwd
           else:
             self.back()
+            time.sleep(1)
+
             self.right()
+            time.sleep(1)
             self.fwd()
             time.sleep(1)
             self.left()
+            time.sleep(1)
             self.fwd()
+            time.sleep(1)
             #self.Choice()
 
       '''
