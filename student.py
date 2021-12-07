@@ -44,7 +44,6 @@ class Piggy(PiggyParent):
                 "v": ("Vincent D. Test", self.vince),
                 "t": ("Turner Test", self.turner),
                 "p": ("Choice Test", self.Choice),
-                "w": ("Swerve Test", self.swr),
                 "h": ("check barriers test", self.Check),
                 "b": ("Square test", self.square)
                 }
