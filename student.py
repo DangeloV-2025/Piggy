@@ -72,7 +72,7 @@ class Piggy(PiggyParent):
       while True:
         self.servo(self.MIDPOINT + 200)
         if self.read_distance() <= barr_dist:
-          self.swr("left")
+          self.swr("right")
         else:
           pass
         self.servo(self.MIDPOINT)
@@ -84,7 +84,7 @@ class Piggy(PiggyParent):
         self.servo(self.MIDPOINT - 200)
         # set 300 to variable
         if self.read_distance()  <= barr_dist:
-          self.swr("right")
+          self.swr("left")
         else:
           pass
 
@@ -95,21 +95,21 @@ class Piggy(PiggyParent):
       if "left" in dir:
         self.stop()
         self.left(primary = 60, counter = 30)
-        time.sleep(.5)
+        time.sleep(1.5)
         self.fwd()
-        time.sleep(.5)
+        time.sleep(1.5)
         self.right(primary = 60, counter=30)
-        time.sleep(.5) 
+        time.sleep(1.5) 
         self.fwd()
       if "right" in dir:
         self.left(primary = 30, counter=60)
-        time.sleep(.5)
+        time.sleep(1.5)
         self.fwd()
-        time.sleep(.5)
+        time.sleep(1.5)
         self.right(primary = 30, counter = 60)
-        time.sleep(.5)
+        time.sleep(1.5)
         self.fwd()
-        time.sleep(.5)
+        time.sleep(1.5)
 
 
 
