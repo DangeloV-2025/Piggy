@@ -45,7 +45,7 @@ class Piggy(PiggyParent):
                 "t": ("Turner Test", self.turner),
                 "p": ("Choice Test", self.Choice),
                 "h": ("check barriers test", self.Check),
-                "m": ("do maze", self.maze),
+                "m": ("do maze", self.Maze),
                 "b": ("Square test", self.square)
                 }
         # loop and print the menu...
@@ -144,9 +144,6 @@ class Piggy(PiggyParent):
       
         
     def Choice(self):
-      while True:
-        if(self.read_distance() > 300):
-          self.fwd()
         elif(self.read_distance() < 299):
           self.stop()
           self.servo(1000)
@@ -193,7 +190,7 @@ class Piggy(PiggyParent):
             time.sleep(1)
             #self.Choice()
       
-      def maze(self):
+      def Maze(self):
         while True:
           self.fwd()
           if self.read_distance() >= 200:
