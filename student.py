@@ -191,7 +191,7 @@ class Piggy(PiggyParent):
           time.sleep(1)
             #self.Choice()
       
-      def Maze(self):
+    def Maze(self):
         while True:
           self.fwd()
           if self.read_distance() >= 200:
