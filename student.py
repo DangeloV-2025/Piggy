@@ -73,7 +73,7 @@ class Piggy(PiggyParent):
         self.servo(self.MIDPOINT + 200)
         if self.read_distance() <= barr_dist:
           self.servo(self.MIDPOINT)
-          self.sleep(.25)
+          time.sleep(.25)
           if self.read_distance() <= barr_dist:
             self.Choice()  
           else:  
@@ -81,18 +81,18 @@ class Piggy(PiggyParent):
         else:
           pass
         self.servo(self.MIDPOINT)
-        self.sleep(.25)
+        time.sleep(.25)
         if self.read_distance() <= barr_dist:
           self.Choice()
           #self.Choice()
         else: 
           pass
         self.servo(self.MIDPOINT - 200)
-        self.sleep(.25)
+        time.sleep(.25)
         # set 300 to variable
         if self.read_distance()  <= barr_dist:
           self.servo(self.MIDPOINT)
-          self.sleep(.25)
+          time.sleep(.25)
           if self.read_distance() <= barr_dist:
             self.Choice()  
           else:
