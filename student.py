@@ -144,50 +144,50 @@ class Piggy(PiggyParent):
       
         
     def Choice(self):
-        elif(self.read_distance() < 299):
-          self.stop()
-          self.servo(1000)
-          time.sleep(1)
-          self.stop()
+      elif(self.read_distance() < 299):
+        self.stop()
+        self.servo(1000)
+        time.sleep(1)
+        self.stop()
           #global first
-          first = self.read_distance()
-          self.servo(2000)
-          time.sleep(1)
-          self.stop()
+        first = self.read_distance()
+        self.servo(2000)
+        time.sleep(1)
+        self.stop()
           #global second
-          far_dist = 2000
-          second = self.read_distance()
-          self.servo(1400)
+        far_dist = 2000
+        second = self.read_distance()
+        self.servo(1400)
+        time.sleep(1)
+        self.stop()
+        if (first > far_dist):
+          self.right()
           time.sleep(1)
           self.stop()
-          if (first > far_dist):
-            self.right()
-            time.sleep(1)
-            self.stop()
-            self.fwd()
-            time.sleep(1)
-            self.left()
-            self.fwd
-          elif (second > far_dist): 
-            self.left()
-            time.sleep(1)
-            self.stop()
-            self.fwd()
-            time.sleep(1)
-            self.right()
-            self.fwd
-          else:
-            self.back()
-            time.sleep(1)
+          self.fwd()
+          time.sleep(1)
+          self.left()
+          self.fwd
+        elif (second > far_dist): 
+          self.left()
+          time.sleep(1)
+          self.stop()
+          self.fwd()
+          time.sleep(1)
+          self.right()
+          self.fwd
+        else:
+          self.back()
+          time.sleep(1)
 
-            self.right()
-            time.sleep(1)
-            self.fwd()
-            time.sleep(1)
-            self.left()
-            time.sleep(1)
-            self.fwd()
-            time.sleep(1)
+          self.right()
+          time.sleep(1)
+          self.fwd()
+          time.sleep(1)
+          self.left()
+          time.sleep(1)
+          self.fwd()
+          time.sleep(1)
             #self.Choice()
       
       def Maze(self):
