@@ -190,11 +190,18 @@ class Piggy(PiggyParent):
           self.fwd()
           time.sleep(1)
             #self.Choice()
-      
+    
     def Maze(self):
       #make distance variable
       while True:
         self.fwd()
+        self.servo(1000)
+        time.sleep(.25)
+        self.servo(MIDPOINT)
+        time.sleep(.25)
+        self.servo(2000)
+        time.sleep(.25)
+
         if self.read_distance() <= 200:
           self.stop()
           self.servo(1000)
