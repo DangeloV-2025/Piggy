@@ -205,11 +205,11 @@ class Piggy(PiggyParent):
           self.servo(1300)
           if lefty > righty and lefty > 200:
             self.left()
-            time.sleep()
+            time.sleep(.5)
             self.fwd()
           if righty > lefty and righty > 200:
             self.right()
-            time.sleep(1)
+            time.sleep(.5)
             self.fwd()
           else:
             self.back()
