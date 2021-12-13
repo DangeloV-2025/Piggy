@@ -193,23 +193,26 @@ class Piggy(PiggyParent):
       
     def Maze(self):
       while True:
+        sleepy = .25
+        dist_sens = 85
+        dist_sens
         self.fwd()
-        if self.read_distance() >= 200:
+        if self.read_distance() >= dist_sens:
           self.stop()
           self.servo(1000)
-          time.sleep(.5)
+          time.sleep(sleepy)
           righty = self.read_distance()
           self.servo(2000)
-          time.sleep(.5)
+          time.sleep(sleepy)
           lefty = self.read_distance()
           self.servo(1300)
-          if lefty > righty and lefty > 200:
+          if lefty > righty and lefty > dist_sens:
             self.left()
-            time.sleep(.5)
+            time.sleep(sleepy)
             self.fwd()
-          if righty > lefty and righty > 200:
+          if righty > lefty and righty > dist_sens:
             self.right()
-            time.sleep(.5)
+            time.sleep(sleepy)
             self.fwd()
           else:
             self.back()
