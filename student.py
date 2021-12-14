@@ -45,6 +45,7 @@ class Piggy(PiggyParent):
                 "t": ("Turner Test", self.turner),
                 "p": ("Choice Test", self.Choice),
                 "h": ("check barriers test", self.Check),
+                "b": ("Do Ben's maze", self.Ben),
                 "m": ("do maze", self.Maze),
                 "b": ("Square test", self.square)
                 }
@@ -190,7 +191,19 @@ class Piggy(PiggyParent):
           self.fwd()
           time.sleep(1)
             #self.Choice()
-      
+    def Ben(self):
+      while True:
+        self.fwd()
+        self.servo(1500)
+        if self.read_distance() < 200:
+          self.stop()
+          self.servo(2000)
+          if self.read_distance() > 200:
+            self.left()
+            time.sleep(1)
+          else:
+            self.right()
+            time.sleep(1) 
     def Maze(self):
       while True:
         sleepy = .25
@@ -198,7 +211,7 @@ class Piggy(PiggyParent):
         self.fwd()
         if (self.read_distance() <= dist_sens):
           self.stop()
-          self.servo(1000)
+          self.servo(800)
           time.sleep(sleepy)
           righty = self.read_distance()
           self.servo(2000)
