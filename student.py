@@ -194,7 +194,7 @@ class Piggy(PiggyParent):
     def Ben(self):
       while True:
         self.fwd()
-        self.servo(1500)
+        self.servo(1300)
         if self.read_distance() < 200:
           self.stop()
           self.servo(2000)
