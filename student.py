@@ -195,9 +195,8 @@ class Piggy(PiggyParent):
       while True:
         sleepy = .25
         dist_sens = 85
-        dist_sens
         self.fwd()
-        if self.read_distance() >= dist_sens:
+        if self.read_distance() <= dist_sens:
           self.stop()
           self.servo(1000)
           time.sleep(sleepy)
