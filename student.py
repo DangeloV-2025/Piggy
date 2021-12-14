@@ -45,7 +45,7 @@ class Piggy(PiggyParent):
                 "t": ("Turner Test", self.turner),
                 "p": ("Choice Test", self.Choice),
                 "h": ("check barriers test", self.Check),
-                "b": ("Do Ben's maze", self.Ben),
+                "ben": ("Do Ben's maze", self.Ben),
                 "m": ("do maze", self.Maze),
                 "b": ("Square test", self.square)
                 }
