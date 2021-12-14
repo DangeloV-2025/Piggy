@@ -222,7 +222,7 @@ class Piggy(PiggyParent):
             self.left()
             time.sleep(sleepy)
             self.fwd()
-          if righty < lefty:
+          if righty > lefty:
             self.right()
             time.sleep(sleepy)
             self.fwd()
